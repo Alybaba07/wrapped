@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rétrospective Générale</title>
+    <link rel="stylesheet" href="general-stats.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-border"></div>
+        <ul>
+            <li><a href="index.html"><img class="logo_accueil" src="accueil.png" alt="accueil"></a></li>
+            <li class="login">
+                <a href="#" class="login-link">Se connecter à Discord</a>
+            </li>
+            <li class="language-selector">
+                <button class="language-btn">🇫🇷 Français</button>
+                <div class="language-dropdown">
+                    <a href="#" onclick="switchLanguage('en')">🇬🇧 English</a>
+                    <a href="#" onclick="switchLanguage('fr')">🇫🇷 Français</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="slideshow-container">
+        <div class="slides-wrapper">
+            <div class="slide" style="background-image: url('image1.jpg');">
+                <div class="stats-content">
+                    <h2>Nombre de messages</h2>
+                    <p>1,234,567 messages échangés</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('image2.jpg');">
+                <div class="stats-content">
+                    <h2>Temps passé en vocal</h2>
+                    <p>500 heures sur les 14 derniers jours</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('image3.jpg');">
+                <div class="stats-content">
+                    <h2>Top 5 salons textuels</h2>
+                    <ol>
+                        <li>#général</li>
+                        <li>#jeux</li>
+                        <li>#mémés</li>
+                        <li>#discussion</li>
+                        <li>#projets</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <script src="general-stats.js"></script>
+</body>
+</html>

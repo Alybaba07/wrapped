@@ -1,0 +1,36 @@
+{
+    "generalStats": {
+      "totalMessages": 59730,
+      "voiceTimeLast30Days": "1560 heures",
+      "topTextChannels": [
+        {"channel": "💬・blabla", "messages": 18964},
+        {"channel": "🛒・bazar", "messages": 3479},
+        {"channel": "🔫・valowo", "messages": 2498},
+        {"channel": "🔱・lol", "messages": 2095},
+        {"channel": "🎨・art", "messages": 1459}
+      ],
+      "topMessageMembers": [
+        {"member": "", "messages": 300},
+        {"member": "", "messages": 250},
+        {"member": "", "messages": 200},
+        {"member": "", "messages": 180},
+        {"member": "", "messages": 150}
+      ],
+      "topVoiceChannelsLast30Days": [
+        {"channel": "🔈・Vocal 1", "time": "1001.05 heures"},
+        {"channel": "🔉・Vocal 2", "time": "171.9 heures"},
+        {"channel": "🔊・Vocal 3", "time": "162.53 heures"},
+        {"channel": "📘・Study Room", "time": "122.88 heures"},
+        {"channel": "🔊・Vocal Chill", "time": "56.68 heures"}
+      ],
+      "topVoiceMembersLast30Days": [
+        {"member": "Aaron", "time": "246.2 heures"},
+        {"member": "Ayoub", "time": "242.62 heures"},
+        {"member": "Booba", "time": "240.22 heures"},
+        {"member": "Mélo", "time": "177.25 heures"},
+        {"member": "Haddamas", "time": "125.57 heures"}
+      ],
+      "newArrivals": 150
+    }
+  }
+  

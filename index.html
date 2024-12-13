@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rétrospective 2024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-border"></div>
+        <ul>
+            <li><a href="index.html"><img class="logo_accueil" src="accueil.png" alt="accueil"></a></li>
+            <li class="login">
+                <a href="#" class="login-link" data-translate="login">Se connecter à Discord</a>
+            </li>
+            <li class="language-selector">
+                <button class="language-btn">🇫🇷 Français</button>
+                <div class="language-dropdown">
+                    <a href="#" onclick="switchLanguage('en')">🇬🇧 English</a>
+                    <a href="#" onclick="switchLanguage('fr')">🇫🇷 Français</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    
+
+    <main>
+        <h1 data-translate="welcome">Bienvenue dans la Rétrospective 2024 du serveur Friskies !</h1>
+        
+        <section class="button-container">
+            <a href="general-stats.html" class="retro-btn" data-translate="generalStats">Rétrospective générale</a>
+            <a href="#personal-stats" class="retro-btn" data-translate="personalStats">Rétrospective personnelle</a>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

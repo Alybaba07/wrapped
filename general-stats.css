@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Empêche le scroll */
+}
+
+nav {
+    background-color: #0e100f; 
+    padding: 15px;
+    position: relative; 
+}
+
+.nav-border {
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    right: 3%;
+    height: 1px;
+    background-color: #42433d;
+    content: '';
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacement entre les éléments */
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav .login {
+    margin-left: auto; 
+}
+
+nav a {
+    color: #fffce1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.logo_accueil {
+    width: 35px;
+    height: 35px;
+}
+
+.language-selector {
+    position: relative;
+    display: inline-block;
+}
+
+.language-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fffce1;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #fffce1;
+    border-radius: 50px;
+    font-weight: bold;
+    background-color: transparent;
+    transition: 0.3s ease;
+}
+
+.language-btn:hover {
+    background-color: #444;
+}
+
+.language-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #fffce1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 120px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.language-dropdown a {
+    color: black;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.language-dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.language-selector:hover .language-dropdown {
+    display: block;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e100f;
+}
+
+.slides-wrapper {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    height: 100%;
+    width: 300%; /* Largeur pour contenir toutes les slides */
+}
+
+.slide {
+    flex: 1 0 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fffce1;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 2em;
+    border-radius: 50%;
+    user-select: none;
+    z-index: 10;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover, .next:hover {
+    color: rgb(129, 129, 129);
+}

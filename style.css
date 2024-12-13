@@ -1,0 +1,177 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0e100f;
+    color: #fffce1;
+}
+
+nav {
+    background-color: #0e100f; 
+    padding: 15px;
+    position: relative; 
+}
+
+.nav-border {
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    right: 3%;
+    height: 1px;
+    background-color: #42433d;
+    content: '';
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacement entre les éléments */
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav .login {
+    margin-left: auto; 
+}
+
+nav a {
+    color: #fffce1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.logo_accueil {
+    width: 35px;
+    height: 35px;
+}
+
+.language-selector {
+    position: relative;
+    display: inline-block;
+}
+
+.language-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fffce1;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #fffce1;
+    border-radius: 50px;
+    font-weight: bold;
+    background-color: transparent;
+    transition: 0.3s ease;
+}
+
+.language-btn:hover {
+    background-color: #444;
+}
+
+.language-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #fffce1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 120px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.language-dropdown a {
+    color: black;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.language-dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.language-selector:hover .language-dropdown {
+    display: block;
+}
+
+main {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 3.5em; 
+    margin: 50px 0; 
+    margin-bottom: 10%;
+    color: #fffce1; 
+    font-weight: bold;
+}
+
+section {
+    margin: 80px 0; /* Augmenter l'espace entre le titre et les boutons */
+}
+
+/* Conteneur des boutons */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Réduire l'espace entre les boutons */
+}
+
+.retro-btn {
+    display: inline-block;
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 15px 40px;
+    margin: 10px;
+    border: 2px solid green;
+    border-radius: 50px;
+    color: #fffce1;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    text-transform: uppercase;
+}
+
+.retro-btn:hover {
+    transform: translateY(-5px); 
+}
+
+/* Tablette */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em; /* Ajuster la taille du titre sur tablette */
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 15px; /* Réduire l'espace entre les boutons sur tablette */
+    }
+
+    .retro-btn, .discord-btn {
+        font-size: 1.2em;
+        padding: 12px 35px;
+    }
+}
+
+/* Téléphone */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 1.8em; /* Ajuster la taille du titre sur téléphone */
+    }
+
+    .retro-btn, .discord-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
