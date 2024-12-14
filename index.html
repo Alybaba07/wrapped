@@ -26,12 +26,27 @@
     
 
     <main>
-        <h1 data-translate="welcome">Bienvenue dans la Rétrospective 2024 du serveur Friskies !</h1>
-        
+        <h1 data-translate="welcome">Bienvenue dans la Rétrospective du serveur Friskies !</h1>    
+        <h3 data-translate="wrapped"> 2024 touche bientôt à sa fin. Quel meilleur moyen de finir l'année qu'en faisant le bilan du serveur ? </h3>
+
+        <div class="flower">
+            <div class="petal petal-1"></div>
+            <div class="petal petal-2"></div>
+            <div class="petal petal-3"></div>
+            <div class="petal petal-4"></div>
+            <div class="center"></div>
+        </div>
+
         <section class="button-container">
             <a href="general-stats.html" class="retro-btn" data-translate="generalStats">Rétrospective générale</a>
             <a href="perso-stats-1.html" class="retro-btn" data-translate="personalStats">Rétrospective personnelle</a>
         </section>
+
+        <div class="info-container">
+            <p class="info" data-translate="tradInfo"> Seuls les salons textuels accessibles à tout le monde, et non dédiés aux commandes (ex : bots) ont été pris en compte dans les statistiques générales.</p>
+            <p class="info" data-translate="tradInfoBis"> Les donnés ont été enregistrées du 1er janvier 2024 au 8 décembre 2024 inclus. Les données vocales n'ont pu être collectées que du 8 novembre au 8 décembre. </p>
+        </div>
+
     </main>
 
     <footer class="footer">
@@ -41,5 +56,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
 </body>
 </html>
