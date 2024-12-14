@@ -1,18 +1,20 @@
-body {
+html, body {
+    height: 100%; /* Le body et l'html occupent toute la hauteur */
+    display: flex;
+    flex-direction: column; /* Organisation verticale */
+    margin: 0; /* Supprime les marges par défaut */
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #0e100f;
-    color: #fffce1;
-}
-
-nav {
+    background-color: #0e100f; 
+    color: #fffce1; 
+  }
+  
+  nav {
     background-color: #0e100f; 
     padding: 15px;
     position: relative; 
-}
-
-.nav-border {
+  }
+  
+  .nav-border {
     position: absolute;
     bottom: 0;
     left: 3%;
@@ -20,43 +22,43 @@ nav {
     height: 1px;
     background-color: #42433d;
     content: '';
-}
-
-nav ul {
+  }
+  
+  nav ul {
     list-style: none;
     margin: 0;
     padding: 0 3%;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Espacement entre les éléments */
-}
-
-nav li {
+    justify-content: space-between;
+  }
+  
+  nav li {
     margin-right: 20px;
-}
-
-nav .login {
+  }
+  
+  nav .login {
     margin-left: auto; 
-}
-
-nav a {
+  }
+  
+  nav a {
     color: #fffce1;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
-}
-
-.logo_accueil {
+  }
+  
+  .logo_accueil {
     width: 35px;
     height: 35px;
-}
-
-.language-selector {
+  }
+  
+  .language-selector {
     position: relative;
     display: inline-block;
-}
-
-.language-btn {
+  }
+  
+  .language-btn {
     display: inline-block;
     text-decoration: none;
     color: #fffce1;
@@ -67,13 +69,13 @@ nav a {
     font-weight: bold;
     background-color: transparent;
     transition: 0.3s ease;
-}
-
-.language-btn:hover {
+  }
+  
+  .language-btn:hover {
     background-color: #444;
-}
-
-.language-dropdown {
+  }
+  
+  .language-dropdown {
     display: none;
     position: absolute;
     background-color: #fffce1;
@@ -81,97 +83,117 @@ nav a {
     min-width: 120px;
     z-index: 1;
     border-radius: 5px;
-}
-
-.language-dropdown a {
+  }
+  
+  .language-dropdown a {
     color: black;
     padding: 10px 20px;
     display: block;
     text-decoration: none;
     transition: background-color 0.3s ease;
-}
-
-.language-dropdown a:hover {
+  }
+  
+  .language-dropdown a:hover {
     background-color: #f1f1f1;
-}
-
-.language-selector:hover .language-dropdown {
+  }
+  
+  .language-selector:hover .language-dropdown {
     display: block;
-}
-
-main {
+  }
+  
+  main {
+    flex: 1; /* Prend tout l'espace restant entre le nav et le footer */
     text-align: center;
     padding: 50px 20px;
-}
-
-h1 {
+  }
+  
+  h1 {
     font-size: 3.5em; 
     margin: 50px 0; 
     margin-bottom: 10%;
     color: #fffce1; 
     font-weight: bold;
-}
-
-section {
-    margin: 80px 0; /* Augmenter l'espace entre le titre et les boutons */
-}
-
-/* Conteneur des boutons */
-.button-container {
+  }
+  
+  section {
+    margin: 80px 0; /* Espace entre le titre et les boutons */
+  }
+  
+  .button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Réduire l'espace entre les boutons */
-}
-
-.retro-btn {
+    gap: 20px;
+  }
+  
+  .retro-btn {
     display: inline-block;
     font-size: 1.5em;
     text-decoration: none;
     padding: 15px 40px;
     margin: 10px;
-    border: 2px solid green;
-    border-radius: 50px;
     color: #fffce1;
     font-weight: bold;
-    transition: transform 0.3s ease;
     text-transform: uppercase;
-}
-
-.retro-btn:hover {
+    background: transparent;
+    border-radius: 30px; 
+    border: 2px solid transparent;
+    background-image: linear-gradient(#0e100f, #0e100f), linear-gradient(90deg, #78c800, #28a92b);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .retro-btn:hover {
     transform: translateY(-5px); 
-}
-
-/* Tablette */
-@media (max-width: 768px) {
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #fffce1; 
+    color: #0e100f; 
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Force le footer à rester en bas */
+  }
+  
+  footer .footer-copy__text {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Tablette */
+  @media (max-width: 768px) {
     h1 {
-        font-size: 2.5em; /* Ajuster la taille du titre sur tablette */
+      font-size: 2.5em; 
     }
-
+  
     .button-container {
-        flex-direction: column;
-        gap: 15px; /* Réduire l'espace entre les boutons sur tablette */
+      flex-direction: column;
+      gap: 15px;
     }
-
-    .retro-btn, .discord-btn {
-        font-size: 1.2em;
-        padding: 12px 35px;
+  
+    .retro-btn {
+      font-size: 1.2em;
+      padding: 12px 35px;
     }
-}
-
-/* Téléphone */
-@media (max-width: 480px) {
+  }
+  
+  /* Téléphone */
+  @media (max-width: 480px) {
     nav ul {
-        flex-direction: column;
-        align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
     }
-
+  
     h1 {
-        font-size: 1.8em; /* Ajuster la taille du titre sur téléphone */
+      font-size: 1.8em;
     }
-
-    .retro-btn, .discord-btn {
-        font-size: 1em;
-        padding: 10px 20px;
+  
+    .retro-btn {
+      font-size: 1em;
+      padding: 10px 20px;
     }
-}
+  }
+  
