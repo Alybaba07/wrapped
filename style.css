@@ -124,7 +124,7 @@ html, body {
 
 .petal {
     position: absolute;
-    width: 40px;
+    width: 30px;
     height: 80px;
     background-color: #f48fb1;
     border-radius: 50%;
@@ -135,15 +135,23 @@ html, body {
 }
 
 .petal-2 {
-    transform: rotate(90deg);
+    transform: rotate(60deg);
 }
 
 .petal-3 {
-    transform: rotate(180deg);
+    transform: rotate(120deg);
 }
 
 .petal-4 {
-    transform: rotate(270deg);
+    transform: rotate(180deg);
+}
+
+.petal-5 {
+  transform: rotate(240deg);
+}
+
+.petal-6 {
+  transform: rotate(300deg);
 }
 
 .center {
@@ -151,6 +159,7 @@ html, body {
     height: 30px;
     background-color: #ffeb3b;
     border-radius: 50%;
+    z-index: 0;
 }
 
 @keyframes rotateFlower {
