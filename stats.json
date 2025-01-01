@@ -1,13 +1,13 @@
 {
     "generalStats": {
-      "totalMessages": 59730,
-      "voiceTimeLast30Days": "1560 heures",
+      "totalMessages": "59 730",
+      "voiceTimeLast30Days": "1 560 heures",
       "topTextChannels": [
-        {"channel": "💬・blabla", "messages": 18964},
-        {"channel": "🛒・bazar", "messages": 3479},
-        {"channel": "🔫・valowo", "messages": 2498},
-        {"channel": "🔱・lol", "messages": 2095},
-        {"channel": "🎨・art", "messages": 1459}
+        {"channel": "💬・Blabla ", "messages": 18964},
+        {"channel": "🛒・Bazar ", "messages": 3479},
+        {"channel": "🔫・Valowo ", "messages": 2498},
+        {"channel": "🔱・Lol ", "messages": 2095},
+        {"channel": "🎨・Art ", "messages": 1459}
       ],
       "topMessageMembers": [
         {"member": "", "messages": 300},

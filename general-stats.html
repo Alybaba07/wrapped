@@ -12,7 +12,7 @@
         <ul>
             <li><a href="index.html"><img class="logo_accueil" src="accueil.png" alt="accueil"></a></li>
             <li class="login">
-                <a href="#" class="login-link">Se connecter à Discord</a>
+                <a href="#" class="login-link" data-translate="login"></a>
             </li>
             <li class="language-selector">
                 <button class="language-btn">🇫🇷 Français</button>
@@ -25,28 +25,45 @@
     </nav>
     <div class="slideshow-container">
         <div class="slides-wrapper">
-            <div class="slide" style="background-image: url('image1.jpg');">
+            <div class="slide">
                 <div class="stats-content">
-                    <h2>Nombre de messages</h2>
-                    <p>x messages échangés</p>
+                    <h2 class="hidden" data-translate="msgTotal1"></h2>
+                    <p class="hidden" id="total-messages-line">
+                        <span data-translate="msgTotal2"></span>
+                        <span id="total-messages" style="-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-image: -webkit-linear-gradient(left, #78c800, #28a92b); font-weight: bold;"></span>
+                        <span style="font-weight: bold;"> messages </span>
+                    </p>
+                    <p class="hidden" data-translate="msgTotal3"></p>
                 </div>
             </div>
-            <div class="slide" style="background-image: url('image2.jpg');">
+            <div class="slide">
                 <div class="stats-content">
-                    <h2>Temps passé en vocal</h2>
-                    <p>x heures sur les 30 derniers jours</p>
+                    <h2 class="hidden">Top 5 salons textuels</h2>
+                    <ol class="hidden" id="top-text-channels"></ol>
                 </div>
             </div>
-            <div class="slide" style="background-image: url('image3.jpg');">
+            <div class="slide">
                 <div class="stats-content">
-                    <h2>Top 5 salons textuels</h2>
-                    <ol>
-                        <li>#</li>
-                        <li>#</li>
-                        <li>#</li>
-                        <li>#</li>
-                        <li>#</li>
-                    </ol>
+                    <h2 class="hidden">Top 5 membres actifs</h2>
+                    <ol class="hidden" id="top-message-members"></ol>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="stats-content">
+                    <h2 class="hidden">Temps passé en vocal</h2>
+                    <p class="hidden" id="voice-time"></p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="stats-content">
+                    <h2 class="hidden">Top 5 salons vocaux</h2>
+                    <ol class="hidden" id="top-voice-channels"></ol>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="stats-content">
+                    <h2 class="hidden">Top 5 membres actifs</h2>
+                    <ol class="hidden" id="top-voice-members"></ol>
                 </div>
             </div>
         </div>
@@ -54,6 +71,6 @@
         <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
 
-    <script src="general-stats.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

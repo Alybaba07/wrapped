@@ -3,11 +3,13 @@ const translations = {
         generalStats: "General Retrospective",
         personalStats: "Personal Retrospective",
         welcome: "Welcome to the 2024 Retrospective of the Friskies server!",
+        msgTotal: "Number of messages",
     },
     fr: {
         generalStats: "Rétrospective Générale",
         personalStats: "Rétrospective Personnelle",
         welcome: "Bienvenue dans la Rétrospective 2024 du serveur Friskies !",
+        msgTotal: "Nombre de messages",
     },
 };
 

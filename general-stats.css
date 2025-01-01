@@ -98,6 +98,26 @@ nav a {
     display: block;
 }
 
+@keyframes fadeInFromBehind {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    animation: fadeInFromBehind 1s ease-in-out forwards;
+}
+
+
 .slideshow-container {
     position: relative;
     width: 100vw;
@@ -112,7 +132,7 @@ nav a {
     display: flex;
     transition: transform 1s ease-in-out;
     height: 100%;
-    width: 300%; /* Largeur pour contenir toutes les slides */
+    width: 300%; 
 }
 
 .slide {
@@ -122,8 +142,9 @@ nav a {
     background-position: center;
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: white;
+    align-items: flex-start;
+    padding-top: 15%;
+    color: #fffce1;
     text-align: center;
     font-size: 1.5em;
 }
