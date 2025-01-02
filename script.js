@@ -106,7 +106,7 @@ function showTextWithDelay() {
         setTimeout(() => {
             element.style.transition = "opacity 0.5s";
             element.style.opacity = 1;
-        }, index * 2000); 
+        }, index * 1250); 
     });
 }
 
