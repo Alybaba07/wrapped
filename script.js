@@ -2,9 +2,9 @@ const translations = {
     en: {
         generalStats: "General Retrospective",
         personalStats: "Personal Retrospective",
-        welcome: "Welcome to the 2024 Retrospective of the Friskies server!",
+        welcome: "Welcome to the 2025 Retrospective of the Friskies server!",
         login: "Login with Discord",
-        wrapped: "2024 is almost over. What better way to end the year than by reviewing the server?",
+        wrapped: "2025 is almost over. What better way to end the year than by reviewing the server?",
         tradInfo: "Only text channels accessible to everyone, and not dedicated to commands (e.g., bots), have been included in the general statistics.",
         tradInfoBis: "The data was recorded from January 1 2024, to December 8 2024, inclusive. Voice data could only be collected from November 8 to December 8.",
         msgTotal1: "This year, you have been real chatterboxes",
@@ -14,11 +14,13 @@ const translations = {
     fr: {
         generalStats: "Rétrospective Générale",
         personalStats: "Rétrospective Personnelle",
-        welcome: "Bienvenue dans la Rétrospective 2024 du serveur Friskies !",
+        welcome: "Bienvenue dans la Rétrospective 2025 du serveur Friskies !",
         login: "Se connecter à Discord",
-        wrapped: "2024 touche bientôt à sa fin. Quel meilleur moyen de finir l'année qu'en faisant le bilan du serveur ?",
+        wrapped: "2025 touche bientôt à sa fin. Quel meilleur moyen de finir l'année qu'en faisant le bilan du serveur ?",
         tradInfo: "Seuls les salons textuels accessibles à tout le monde, et non dédiés aux commandes (ex : bots) ont été pris en compte dans les statistiques générales.",
-        tradInfoBis: "Les données ont été enregistrées du 1er janvier 2024 au 8 décembre 2024 inclus. Les données vocales n'ont pu être collectées que du 8 novembre au 8 décembre.",
+        tradInfoBis: "Les donnés ont été enregistrées du 1er janvier 2025 au 1er décembre (23h59) 2025. Les données vocales sont des approximations assez proches de la réalité mais pas exacte à 100% ",
+        tradInfoBis2: "Pour plus de détails :",
+        tradInfoBis3:"cliquez ici",
         msgTotal1: "Cette année, vous avez été de vraies pipelettes",
         msgTotal2: "À vous tous vous avez envoyé",
         msgTotal3:"Mais dans quels salons avez vous donc trouvé le temps de discuter ?",
@@ -129,8 +131,8 @@ fetch('stats.json')
     // Nombre total de messages
     document.getElementById("total-messages").textContent = `${data.generalStats.totalMessages}`;
 
-    // Temps vocal des 30 derniers jours
-    document.getElementById("voice-time").textContent = `${data.generalStats.voiceTimeLast30Days}`;
+    // Temps vocal 
+    document.getElementById("voice-time").textContent = `${data.generalStats.voiceTime}`;
 
     // Top 5 salons textuels
     const topTextChannels = data.generalStats.topTextChannels.map(channel => 
@@ -145,16 +147,16 @@ fetch('stats.json')
     document.getElementById("top-message-members").innerHTML = topMessageMembers;
 
     // Top 5 salons textuels
-    const topVoiceChannelsLast30Days = data.generalStats.topVoiceChannelsLast30Days.map(channel => 
+    const topVoiceChannels = data.generalStats.topVoiceChannels.map(channel => 
         `<li>${channel.channel}: ${channel.time} heures </li>`
     ).join('');
-    document.getElementById("top-voice-channels").innerHTML = topVoiceChannelsLast30Days;
+    document.getElementById("top-voice-channels").innerHTML = topVoiceChannels;
 
     // Top 5 membres les plus actifs vocal
-    const topVoiceMembersLast30Days = data.generalStats.topVoiceMembersLast30Days.map(member => 
+    const topVoiceMembers = data.generalStats.topVoiceMembers.map(member => 
         `<li>${member.member || "Anonyme"}: ${member.time} heures </li>`
     ).join('');
-    document.getElementById("top-voice-members").innerHTML = topVoiceMembersLast30Days;
+    document.getElementById("top-voice-members").innerHTML = topVoiceMembers;
 
   })
   .catch(error => {

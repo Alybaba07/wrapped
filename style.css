@@ -37,6 +37,11 @@ html, body {
   nav li {
     margin-right: 20px;
   }
+
+  ul {
+    list-style: none;
+    align-items: center;
+  }
   
   nav .login {
     margin-left: auto; 
@@ -47,6 +52,13 @@ html, body {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+  }
+
+
+ .click {
+    color: #42433d;
+    text-decoration: none;
+    font-size: 0.8em;
   }
   
   .logo_accueil {
@@ -106,6 +118,7 @@ html, body {
     flex: 1; /* Prend tout l'espace restant entre le nav et le footer */
     text-align: center;
     padding: 50px 20px;
+    padding-bottom: 0;
   }
   
   .flower {
@@ -210,7 +223,6 @@ html, body {
 
   .info-container {
     margin-top: 9%;
-    margin-bottom: -15px; 
 }
 
   .info {
@@ -267,6 +279,15 @@ html, body {
     margin: 0;
   }
 
+.titre_détails {
+  padding-left: 2%;
+}
+
+.texte_détails {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+  
   /* Tablette askip*/
   @media (max-width: 768px) {
     h1 {
